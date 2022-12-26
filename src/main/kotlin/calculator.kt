@@ -38,6 +38,9 @@ fun mathOperations(number1: Int, number2: Int, operationCode: Int){
             else -> error("error 01: digite um número válido entre 1 e 4! (Operation Code: $operationCode)")
         }
     }
-    //mostrando o resultado
-    println("o resultado é: ${operations.result}")
+    //implementando a função de escopo with no retorno do resultado da conta
+    with(operations){
+        println("o resultado é: $result")
+    }
+
 }
